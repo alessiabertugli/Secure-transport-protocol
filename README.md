@@ -20,6 +20,7 @@ In the first part of the program the key is exchanged using the Diffie-Hellman a
 In the second part of the program the client reads the message from the file message.txt and calls the secureSend encryption function contained in the DatagramSocketEncrypt class to encrypt the message. The server receives the message from the client and decrypts it using the secureReceive decryption method, also implemented in the DatagramSocketEncrypt class. In the same way the server criticizes a message contained in message2.txt and the client decrypts it.
 
 The DatagramSocketEncrypt class contains the two methods mentioned above:
+
   ***• secureSend:*** receives the secret key as input, the message as byte array, the address
   ip and the port. The message is encrypted using AES, with CBC and PKCS5 padding. The initialization vector is static and defined outside the method. The encrypted message is sent, then the method returns an array of bytes representing the ciphertext.
 
